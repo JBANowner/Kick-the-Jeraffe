@@ -1,0 +1,58 @@
+#game-container {
+    position: relative;
+    width: 600px;
+    height: 400px;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+}
+
+#boot {
+    position: absolute;
+    font-size: 50px; /* Replace with boot image later */
+    bottom: 50px;
+    left: 50px;
+    cursor: pointer;
+}
+
+#jeraffe {
+    position: absolute;
+    bottom: 50px;
+    right: 50px;
+}
+
+#jeraffe-face {
+    width: 100px; /* Adjust size */
+}
+
+#gem {
+    position: absolute;
+    bottom: 150px;
+    right: 100px;
+    font-size: 24px;
+    color: #FFD700; /* Gold gem color */
+}
+
+.hidden {
+    display: none;
+}
+
+/* Animation for boot hopping and kicking */
+@keyframes hop {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-30px); }
+    100% { transform: translateY(0); }
+}
+
+@keyframes swing {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(45deg); }
+}
+
+.boot-hop {
+    animation: hop 0.3s ease-in-out;
+}
+
+.boot-swing {
+    transform-origin: bottom right;
+    animation: swing 0.5s forwards;
+}
